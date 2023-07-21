@@ -1,0 +1,68 @@
+{
+    "__del__": {
+        "self": null
+    },
+    "__init__": {
+        "self": null,
+        "ip": null,
+        "password": "secret"
+    },
+    "debug": {
+        "self": null
+    },
+    "disable_motor": {
+        "self": null,
+        "index": null
+    },
+    "disable_servo": {
+        "self": null,
+        "index": null
+    },
+    "estop": {
+        "self": null
+    },
+    "get": {
+        "self": null
+    },
+    "get_settings_version": {
+        "self": null
+    },
+    "set_led": {
+        "self": null,
+        "red": null,
+        "green": null,
+        "blue": null,
+        "blink": 0
+    },
+    "set_motor_pid": {
+        "self": null,
+        "index": null,
+        "kp": null,
+        "ki": null,
+        "kd": null
+    },
+    "set_motor_power": {
+        "self": null,
+        "index": null,
+        "power": null
+    },
+    "set_motor_speed": {
+        "self": null,
+        "index": null,
+        "speed": null
+    },
+    "set_motor_speed_distance": {
+        "self": null,
+        "index": null,
+        "speed": null,
+        "encoder_ticks": null
+    },
+    "set_servo": {
+        "self": null,
+        "index": null,
+        "width": null
+    },
+    "start": {
+        "self": null
+    }
+}
