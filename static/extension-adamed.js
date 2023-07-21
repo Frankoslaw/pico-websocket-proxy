@@ -12,8 +12,6 @@
                 getInfo() {
                     let blocks = [];
 
-                    console.log(signatures);
-
                     for (const [f_name, f_args] of Object.entries(signatures)) {
                         blocks.push({
                             opcode: f_name,
@@ -21,8 +19,6 @@
                             text: f_name,
                         });
                     }
-
-                    console.log(blocks);
 
                     return {
                         id: "adamedpicoproxy",
@@ -39,8 +35,6 @@
                     // TODO: Executre WebSocket
                 };
             }
-
-            console.log(AdamedPicoProxy);
 
             Scratch.extensions.register(new AdamedPicoProxy());
         })
