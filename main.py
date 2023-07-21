@@ -23,7 +23,7 @@ for function in getmembers(Robot, isfunction):
             list(reversed(defaults)) 
         ))))
 
-with open('./out/signatures.json', 'w', encoding='utf-8') as f:
+with open('./static/signatures.json', 'w', encoding='utf-8') as f:
     json.dump(signatures, f, ensure_ascii=False, indent=4)
 
 
@@ -31,8 +31,21 @@ with open('./out/signatures.json', 'w', encoding='utf-8') as f:
 import ipaddress
 from fastapi import FastAPI, WebSocket
 from fastapi.staticfiles import StaticFiles
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI()
+
+origins = [
+    "https://turbowarp.org"
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 app.mount("/static", StaticFiles(directory="static"), name="static")
 

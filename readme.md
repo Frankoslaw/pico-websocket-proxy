@@ -20,3 +20,7 @@ get 192.168.1.21
 ## TurboWarp
 
 Extension after running the proxy will be exposed on `http://localhost:8000/`, port CANNOT be changed, because turbowarp requires it to disable local sandbox.
+
+```
+http://localhost:8000/static/extension-helloworld.js
+```
