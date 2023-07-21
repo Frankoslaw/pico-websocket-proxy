@@ -35,6 +35,7 @@ import ipaddress
 import asyncio
 from websockets.server import serve
 
+print("Server running :D")
 robots = {}
 
 async def echo(websocket):
@@ -57,10 +58,16 @@ async def echo(websocket):
                     await websocket.send(f"Robot {ip} initialised")
 
             case "get_commands":
-                await websocket.send('\n'.join(signatures.keys()))
+                await websocket.send('\n'.join(["init"] + list(signatures.keys())))
 
             case _:
                 if command in signatures:
+                    # TODO: Command handler
+                    robot_ip = args[0]
+                    robot = robots[robot_ip]
+
+                    function_calls[command](robot, *args[1:])
+
                     await websocket.send(
                         json.dumps(signatures[command], ensure_ascii=False, indent=4)
                     )
