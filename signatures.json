@@ -46,16 +46,16 @@
         "index": null,
         "power": null
     },
+    "set_motor_power_distance": {
+        "self": null,
+        "index": null,
+        "power": null,
+        "encoder_ticks": null
+    },
     "set_motor_speed": {
         "self": null,
         "index": null,
         "speed": null
-    },
-    "set_motor_speed_distance": {
-        "self": null,
-        "index": null,
-        "speed": null,
-        "encoder_ticks": null
     },
     "set_servo": {
         "self": null,
