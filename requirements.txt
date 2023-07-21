@@ -1,3 +1,5 @@
+fastapi
+uvicorn[standard]
 asyncio
 websockets
 -e git+https://github.com/mikh3x4/smartup-robot#egg=smartup-robot&subdirectory=controller
